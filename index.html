@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only JavaScript</title>
+</head>
+<body>
+  <script>
+    // <body></body>
+    const body = document.querySelector('body');
+
+    // <div class="wrapper"></div>
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('wrapper');
+    body.appendChild(wrapper);
+
+    // <header class="header" data-header></header>
+    const header = document.createElement('header');
+    header.style.backgroundColor('');
+    wrapper.appendChild(header);
+
+    //const headerTitle = document.createElement('h1');
+
+    // <main class="main" data-main></main>
+    const main = document.createElement('main');
+    main.classList.add('main');
+    wrapper.appendChild(main);
+
+    // <footer class="footer" data-footer></footer>
+    const footer = document.createElement('footer');
+    footer.classList.add('footer');
+    wrapper.appendChild(footer);
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test-list__link {
+      background-color: brown;
+      display: block;
+    }
+
+    .contents-list {
+      background-color: antiquewhite;
+      margin: 0 auto;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <ul class="test-list">
+    <li class="test-list__item">
+      <a href="" class="test-list__link">
+        <div class="">リスト前</div>
+        <div data-container>
+          <dl class="contents-list" data-contents-list>
+            <dd class="contents-list__item">
+              <span class="contents-list__item-text">りんご</span>
+            </dd>
+            <dd class="contents-list__item">
+              <span class="contents-list__item-text">りんご</span>
+            </dd>
+            <dd class="contents-list__item">
+              <span class="contents-list__item-text">りんご</span>
+            </dd>
+          </dl>
+        </div>
+        <div>リスト後</div>
+      </a>
+    </li>
+  </ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const contentsLists = document.querySelectorAll('[data-contents-list]');
+
+      contentsLists.forEach(list => {
+        // リストの高さを取得
+        const listHeight = list.clientHeight;
+        // リストの兄弟要素のアンカーを取得
+        const anchor = list.previousElementSibling;
+        // アンカーの2番目の子要素を取得
+        const container = anchor.children[1];
+        // アンカーの3番目の子要素を取得
+        const itemBelow = anchor.children[2];
+        // アンカーの3番目の子要素の高さを取得
+        const itemBelowHeight = itemBelow.clientHeight;
+        // アンカーの2番目の子要素にリストの高さを付与
+        container.style.height = listHeight + 'px';
+
+        const totalHeight = `-${listHeight + itemBelowHeight}px`;
+
+        list.style.marginTop = totalHeight;
+      });
+
+
+
+      // const KIDS = document.querySelectorAll('[data-kid]');
+      // const PARENTS = document.querySelectorAll('[data-parent]');
+      // const ANCHORS = document.querySelectorAll('[data-anchor]');
+
+      // KIDS.forEach(kid => {
+      //   document.addEventListener('mousedown', (e) => {
+      //     const parent = e.target.closest('[data-parent]');
+      //     const anchor = e.target.closest('[data-anchor]');
+      //     if (e.target === kid) {
+      //       e.stopImmediatePropagation();
+      //       e.preventDefault();
+      //       console.log(e.target);
+      //       anchor.classList.add('is-active');
+      //     } else if (e.target === parent) {
+      //       e.stopImmediatePropagation();
+      //       e.preventDefault();
+      //       console.log(e.target);
+      //       anchor.classList.add('is-active');
+      //     } else {
+      //       console.log(e.target);
+      //       ANCHORS.forEach(an => {
+      //         an.classList.remove('is-active');
+      //       });
+      //     }
+      //   });
+      //   document.addEventListener('click', (e) => {
+      //     const parent = e.target.closest('[data-parent]');
+      //     const anchor = e.target.closest('[data-anchor]');
+      //     if (e.target === kid) {
+      //       e.stopImmediatePropagation();
+      //       e.preventDefault();
+      //       console.log(e.target);
+      //       anchor.classList.add('is-active');
+      //     } else if (e.target === parent) {
+      //       e.stopImmediatePropagation();
+      //       e.preventDefault();
+      //       console.log(e.target);
+      //       anchor.classList.add('is-active');
+      //     } else {
+      //       console.log(e.target);
+      //       ANCHORS.forEach(anchor => {
+      //         anchor.classList.remove('is-active');
+      //       });
+      //     }
+      //   });
+      // });
+
+    });
+  </script>
+</body>
+</html>
