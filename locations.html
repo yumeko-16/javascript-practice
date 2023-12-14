@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get locations</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    /* JSONデータを非同期で読み込む */
+    const url = '/js/locations.json';
+    console.log(url);
+
+    const getLocations = () => {
+      return new Promise(function (resolve) {
+        // XMLHttpRequestオブジェクトを定義
+        let xhr = new XMLHttpRequest();
+
+        // JSONファイルへのパスを指定
+        xhr.open('GET', url);
+        // JSONファイルの読み込みを開始
+        xhr.send();
+
+        // onreadystatechangeイベントを定義
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // JSONをパースしてresolveで返す
+            let result = JSON.parse(xhr.responseText);
+            console.log(result);
+
+            resolve(result);
+          }
+        }
+      });
+    }
+
+    getLocations().then(function (locations) {
+      // resolve()が実行されたときの処理
+      let html = '';
+      for (let i = 0; i < locations.length; i++) {
+        html += locations[i].name + '/' + locations[i].address + "<br>"
+      }
+      document.getElementById('output').innerHTML = html;
+    });
+  </script>
+</body>
+</html>
