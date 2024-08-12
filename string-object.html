@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const str1 = 'テストのテスト'
+
+    console.log(str1.indexOf('ト', 3)); // `の`から右側へ検索
+    console.log(str1.lastIndexOf('ト', 5)); // `ス`から左側へ検索
+    console.log(str1.startsWith('テス')); // 先頭一致か
+    console.log(str1.endsWith('スト')); // 後方一致か
+    console.log(str1.includes('のテ')); // 含むか
+  </script>
+</body>
+</html>
