@@ -1,7 +1,5 @@
 {
-  "tabWidth": 2,
-  "useTabs": false,
-  "singleQuote": true,
-  "semi": true,
-  "trailingComma": "none"
+  "htmlWhitespaceSensitivity": "strict",
+  "singleAttributePerLine": true,
+  "singleQuote": true
 }
