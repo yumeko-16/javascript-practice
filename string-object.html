@@ -17,6 +17,37 @@
       console.log(str1.startsWith('テス')); // 先頭一致か
       console.log(str1.endsWith('スト')); // 後方一致か
       console.log(str1.includes('のテ')); // 含むか
+      console.log('-------------');
+
+      const str2 = 'Wingsプロジェクト';
+      const str3 = '叱られて';
+      const str4 = ' wings ';
+
+      console.log(str2.charAt(4)); // s
+      console.log(str2.slice(3)); // gsプロジェクト
+      console.log(str2.substring(3)); // gsプロジェクト
+      console.log(str2.slice(3, 6)); // gsプ indexの6番目自体は含まない
+      console.log(str2.substring(3, 6)); // gsプ indexの6番目自体は含まない
+      console.log(str2.slice(-4, -1)); // ジェク
+      console.log(str2.substring(-6, 2)); // Wi 負の値は0扱い
+      console.log(str2.slice(6, -3)); // ロジ
+      console.log(str2.substring(6, -3)); // Wingsプ
+      console.log(str2.slice(6, 3)); // 空文字列
+      console.log(str2.substring(6, 3)); // gsプ start>endなので入れ替え
+      console.log(str2.substr(6, 3)); // ジェク
+      console.log(str1.split('テ', 1)); // ['']
+      console.log(str1.split('テ', 2)); // ['', 'ストの']
+      console.log(str1.split('テ', 3)); // ['', 'ストの', 'スト']
+      console.log(str1.split('テ', 4)); // ['', 'ストの', 'スト']
+      console.log(str2.split('s', 2)); // ['Wing', 'プロジェクト']
+      console.log(str2.charCodeAt(0)); // W = 87
+      console.log(String.fromCharCode(87, 105, 110, 103)); // Wing
+      console.log(str3.codePointAt(0)); // 21489
+      console.log(String.fromCodePoint(21489)); // 叱
+      console.log(str2.concat(' 有限会社')); // Wingsプロジェクト 有限会社
+      console.log(str2.repeat(2)); // WingsプロジェクトWingsプロジェクト
+      console.log(str4.trim()); // wings
+      console.log(str2.length); // 11
     </script>
   </body>
 </html>
