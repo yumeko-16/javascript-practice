@@ -10,8 +10,14 @@
   </head>
   <body>
     <h1>Number Object</h1>
+
     <script>
       console.log(Number.MAX_SAFE_INTEGER);
+
+      const n = '123xxx';
+      console.log(Number(n));
+      console.log(Number.parseFloat(n));
+      console.log(Number.parseInt(n));
     </script>
   </body>
 </html>
