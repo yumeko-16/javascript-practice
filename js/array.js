@@ -30,3 +30,8 @@ console.log(ary1.reverse()); // ['Kondo', 'Saitoh', 'Hio', 'Saitoh', 'Hio', 'Kug
 console.log(ary1); // ['Kondo', 'Saitoh', 'Hio', 'Saitoh', 'Hio', 'Kuge', 'Ozawa']（反転後の配列）
 console.log(ary1.sort()); // ['Hio', 'Hio', 'Kondo', 'Kuge', 'Ozawa', 'Saitoh', 'Saitoh']
 console.log(ary1); // ['Hio', 'Hio', 'Kondo', 'Kuge', 'Ozawa', 'Saitoh', 'Saitoh']
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log(document.querySelectorAll('[data-list] li'));
+  console.log(Array.from(document.querySelectorAll('[data-list] li')));
+});
