@@ -34,4 +34,12 @@ console.log(ary1); // ['Hio', 'Hio', 'Kondo', 'Kuge', 'Ozawa', 'Saitoh', 'Saitoh
 document.addEventListener('DOMContentLoaded', () => {
   console.log(document.querySelectorAll('[data-list] li'));
   console.log(Array.from(document.querySelectorAll('[data-list] li')));
+
+  const frame = document.getElementById('frame');
+  const frame_children = frame.children;
+  console.log(frame_children); // HTMLCollection
+  const frame_array = Array.from(frame.children);
+  console.log(frame_array); // 配列
+  const frame_spread = [...frame_children];
+  console.log(frame_spread); // spread
 });
