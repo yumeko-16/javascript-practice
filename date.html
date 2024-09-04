@@ -2,12 +2,34 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
   </head>
   <body>
     <script>
       const dat = new Date(2016, 11, 25, 11, 37, 15, 999);
       console.log(dat); // Sun Dec 25 2016 11:37:15 GMT+0700 (Indochina Time)
+      console.log(dat.getFullYear()); // 結果：2016
+      console.log(dat.getMonth()); // 結果：11
+      console.log(dat.getDate()); // 結果：25
+      console.log(dat.getDay()); // 結果：0
+      console.log(dat.getHours()); // 結果：11
+      console.log(dat.getMinutes()); // 結果：37
+      console.log(dat.getSeconds()); // 結果：15
+      console.log(dat.getMilliseconds()); // 結果：999
+      console.log(dat.getTime()); // 結果：1482640635999
+      console.log(dat.getTimezoneOffset()); // 結果：-420
+      console.log(dat.getUTCFullYear()); // 結果：2016
+      console.log(dat.getUTCMonth()); // 結果：11
+      console.log(dat.getUTCDate()); // 結果：25
+      console.log(dat.getUTCDay()); // 結果：0
+      console.log(dat.getUTCHours()); // 結果：4
+      console.log(dat.getUTCMinutes()); // 結果：37
+      console.log(dat.getUTCSeconds()); // 結果：15
+      console.log(dat.getUTCMilliseconds()); // 結果：999
     </script>
   </body>
 </html>
