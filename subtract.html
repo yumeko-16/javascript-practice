@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const dat1 = new Date(2017, 4, 15);
+      const dat2 = new Date(2017, 5, 20);
+      const diff = (dat2.getTime() - dat1.getTime()) / (1000 * 60 * 60 * 24);
+      console.log(diff + '日の差があります。'); // 結果：36
+    </script>
+  </body>
+</html>
