@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = new Object();
+      console.log(obj.toString()); // 結果：[object Object]
+      console.log(obj.valueOf()); // 結果：{}
+
+      const dat = new Date();
+      console.log(dat.toString()); // 結果：Sat Sep 07 2024 22:43:40 GMT+0700 (Indochina Time)
+      console.log(dat.valueOf()); // 結果：1725723857728
+    </script>
+  </body>
+</html>
