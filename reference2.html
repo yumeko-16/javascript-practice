@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var value = [1, 2, 4, 8, 16];
+
+      function deleteElement(value) {
+        value.pop(); // 末尾の要素を削除
+        return value;
+      }
+
+      console.log(deleteElement(value)); // 結果：[1, 2, 4, 8]
+      console.log(value); // 結果：[1, 2, 4, 8]
+    </script>
+  </body>
+</html>
