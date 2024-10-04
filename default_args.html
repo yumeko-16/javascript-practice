@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getTriangle(base, height) {
+        if (base === undefined) {
+          base = 1;
+        }
+        if (height === undefined) {
+          height = 1;
+        }
+        return (base * height) / 2;
+      }
+
+      console.log(getTriangle(5)); // 結果：2.5
+    </script>
+  </body>
+</html>
