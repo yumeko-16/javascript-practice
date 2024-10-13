@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function multi(a, b = a) {
+        return a * b;
+      }
+
+      console.log(multi(10, 5)); // 結果：50
+      console.log(multi(3)); // 結果：9
+    </script>
+  </body>
+</html>
