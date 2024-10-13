@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function multi(a = b, b = 5) {
+        return a * b;
+      }
+
+      console.log(multi()); // 結果：Uncaught ReferenceError: Cannot access 'b' before initialization
+    </script>
+  </body>
+</html>
