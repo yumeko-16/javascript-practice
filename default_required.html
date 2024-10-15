@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function show(x, y = 1) {
+        console.log('x=' + x); // 結果：x=undefined
+        console.log('y=' + y); // 結果：y=1
+      }
+
+      show();
+    </script>
+  </body>
+</html>
