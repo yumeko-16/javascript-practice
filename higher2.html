@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 高階関数arrayWalkを定義
+      function arrayWalk(data, f) {
+        for (var key in data) {
+          f(data[key], key);
+        }
+      }
+
+      // 結果値を格納するためのグローバル変数
+      var result = 0;
+      function sumElement(value, key) {
+        // 与えられた配列要素で変数resultを加算
+        result += value;
+      }
+
+      var ary = [1, 2, 4, 8, 16];
+      arrayWalk(ary, sumElement);
+      console.log('合計値：' + result); // 結果：31
+    </script>
+  </body>
+</html>
