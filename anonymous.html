@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 高階関数arrayWalkを定義
+      function arrayWalk(data, f) {
+        for (var key in data) {
+          f(data[key], key);
+        }
+      }
+
+      var ary = [1, 2, 4, 8, 16];
+      arrayWalk(ary, function (value, key) {
+        console.log(key + '：' + value);
+      });
+    </script>
+  </body>
+</html>
