@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var y = 'Global';
+
+      function outerFunc() {
+        var y = 'Local Outer';
+
+        function innerFunc() {
+          var z = 'Local Inner';
+          console.log(z); // 結果：Local Inner
+          console.log(y); // 結果：Local Outer
+          console.log(x); // 結果：エラー（変数xは未定義）
+        }
+
+        innerFunc();
+      }
+
+      outerFunc();
+    </script>
+  </body>
+</html>
