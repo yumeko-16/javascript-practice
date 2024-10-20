@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function closure(init) {
+        var counter = init;
+
+        return function () {
+          return ++counter;
+        };
+      }
+
+      var myClosure1 = closure(1);
+      var myClosure2 = closure(100);
+
+      console.log(myClosure1()); // 結果：2
+      console.log(myClosure2()); // 結果：101
+      console.log(myClosure1()); // 結果：3
+      console.log(myClosure2()); // 結果：102
+    </script>
+  </body>
+</html>
