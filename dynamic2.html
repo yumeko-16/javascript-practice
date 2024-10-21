@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Member = function (firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+      };
+
+      var mem = new Member('次郎', '山田');
+      mem.getName = function () {
+        return this.lastName + ' ' + this.firstName;
+      };
+
+      console.log(mem.getName()); // 結果：山田 次郎
+
+      var mem2 = new Member('奈美', '掛谷');
+      console.log(mem2.getName()); // 結果：Uncaught TypeError: mem2.getName is not a function
+    </script>
+  </body>
+</html>
