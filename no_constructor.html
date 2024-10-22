@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Member = function (firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+      };
+
+      var m = Member('権兵衛', '佐藤');
+      console.log(m); // 結果：undefined
+      console.log(firstName); // 結果：権兵衛
+      console.log(m.firstName); // 結果：Uncaught TypeError: Cannot read properties of undefined (reading 'firstName')
+    </script>
+  </body>
+</html>
