@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var data = 'Global data';
+      var obj1 = { data: 'obj1 data' };
+      var obj2 = { data: 'obj2 data' };
+
+      function hoge() {
+        console.log(this.data);
+      }
+
+      hoge.call(null); // 結果：Global data
+      hoge.call(obj1); // 結果：obj1 data
+      hoge.call(obj2); // 結果：obj2 data
+    </script>
+  </body>
+</html>
