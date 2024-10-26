@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Member = function (firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+      };
+
+      Member.prototype.getName = function () {
+        return this.lastName + ' ' + this.firstName;
+      };
+
+      Member.prototype.toString = function () {
+        return this.lastName + this.firstName;
+      };
+    </script>
+  </body>
+</html>
