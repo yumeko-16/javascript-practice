@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var Animal = function () {};
+
+      Animal.prototype = {
+        walk: function () {
+          console.log('トコトコ...');
+        },
+      };
+
+      var SuperAnimal = function () {};
+      SuperAnimal.prototype = {
+        walk: function () {
+          console.log('ダダダダダ！');
+        },
+      };
+
+      var Dog = function () {};
+      Dog.prototype = new Animal(); // Animalオブジェクトを継承
+      var d1 = new Dog();
+      d1.walk(); // 結果：トコトコ...
+
+      Dog.prototype = new SuperAnimal(); // SuperAnimalオブジェクトを継承
+      var d2 = new Dog();
+      d2.walk(); // 結果：ダダダダダ！
+      d1.walk(); // 結果：トコトコ...
+    </script>
+  </body>
+</html>
