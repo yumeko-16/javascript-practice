@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Member {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        // メソッド
+        getName() {
+          return this.lastName + this.firstName;
+        }
+      }
+
+      // Memberオブジェクトを継承したBusinessMemberクラスを定義
+      class BusinessMember extends Member {
+        work() {
+          return this.getName() + 'は働いています。';
+        }
+      }
+
+      let bm = new BusinessMember('太郎', '山田');
+      console.log(bm.getName()); // 結果：山田太郎
+      console.log(bm.work()); // 結果：山田太郎は働いています。
+    </script>
+  </body>
+</html>
