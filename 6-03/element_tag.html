@@ -17,11 +17,11 @@
 
     <script>
       const list = document.getElementsByTagName('a');
+      console.log(list);
       const listAry = [...list];
+      console.log(listAry);
 
-      listAry.map((v) => {
-        console.log(v.href);
-      });
+      listAry.map((v) => console.log(v.href));
     </script>
   </body>
 </html>
