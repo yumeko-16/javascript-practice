@@ -1,8 +1,3 @@
 {
-  "htmlWhitespaceSensitivity": "strict",
-  "singleAttributePerLine": true,
-  "singleQuote": true,
-  "tabWidth": 2,
-  "plugins": ["@prettier/plugin-php"],
-  "phpVersion": "8.2"
+  "singleQuote": true
 }
