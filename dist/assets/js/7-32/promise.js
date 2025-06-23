@@ -1,4 +1,4 @@
-import { AsyncProcess } from './asyncProcess.js';
+import { AsyncProcess } from '../modules/asyncProcess.js';
 AsyncProcess('トクジロウ').then((response) => {
     console.log(response);
 }, (error) => {
