@@ -1,0 +1,106 @@
+/* reset */
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+  scroll-behavior: auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* コンテンツ */
+.bg {
+  background-color: aqua;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.section {
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.mainSection {
+  background-color: #fff;
+}
+
+.mainSection h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container {
+  margin-inline: auto;
+  width: 80%;
+}
+
+.scrollContainer {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scrollList {
+  display: flex;
+  width: 100%;
+}
+
+.scrollItem {
+  flex-shrink: 0;
+  padding-inline: 3vw;
+  width: 100%;
+}
+
+.card {
+  background-color: #333;
+}
+
+.card p {
+  color: #fff;
+  display: block;
+}
+
+.image {
+  height: 20vw;
+  object-fit: cover;
+  width: 30vw;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 5vw;
+  font-weight: 700;
+  margin: 0;
+}

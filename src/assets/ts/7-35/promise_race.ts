@@ -1,4 +1,4 @@
-import { AsyncProcess } from '../7-32/asyncProcess.js';
+import { AsyncProcess } from '../modules/asyncProcess.js';
 
 Promise.race([
   AsyncProcess('トクジロウ'),
