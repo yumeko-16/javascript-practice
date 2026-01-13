@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>
+      ページ内スクロールのナビゲーションにカレントを付与するJavaScript（GSAP）
+    </title>
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="index.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
+      <a class="logo" href="/">GSAP</a>
+    </header>
+
+    <div class="hero">
       <h1>
         ページ内スクロールのナビゲーションにカレントを付与するJavaScript（GSAP）
       </h1>
       <p>GSAPのscrollTriggerを使用し、ナビゲーションのカレント制御をします。</p>
-    </header>
+    </div>
 
     <div class="wrapper">
       <main class="main">
@@ -179,6 +185,40 @@
           </ul>
         </nav>
       </aside>
+    </div>
+
+    <div class="fixedNav" id="fixedNav">
+      <!-- 開くボタン（外） -->
+      <button
+        id="navToggle"
+        class="openButton"
+        aria-expanded="false"
+        aria-controls="navPanel"
+      >
+        Menu
+      </button>
+
+      <!-- パネル -->
+      <nav id="navPanel" class="navPanel" aria-hidden="true">
+        <button class="closeButton" id="navClose" aria-label="Close menu">
+          ×
+        </button>
+
+        <ul class="navList" data-scroll-nav>
+          <li class="navItem" data-scroll-nav-item>
+            <a href="#section001">section1</a>
+          </li>
+          <li class="navItem" data-scroll-nav-item>
+            <a href="#section002">section2</a>
+          </li>
+          <li class="navItem" data-scroll-nav-item>
+            <a href="#section003">section3</a>
+          </li>
+          <li class="navItem" data-scroll-nav-item>
+            <a href="#section004">section4</a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <footer class="footer">
